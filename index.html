@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" defer></script>
+    <script src="https://kit.fontawesome.com/9545eaf2dc.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MyBookList</title>
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-book-open"> MyBookLibrary</i></h1>
+    </header>
+
+    <main class="container">
+        <div class="book-grid" id="bookGrid">
+            <p class="book-grid-text" id="gridText">*click the plus to add a book to your library*</p>
+        </div>
+        <div class="modal" id="Modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 class="modal-title">Add new book</h3>
+                <form id="bookForm">
+                    <p class="modal-author">Author:</p>
+                    <input class="input" type="text" placeholder="Author" id="modalAuthor" required/>
+
+                    <p class="modal-title">Title:</p>
+                    <input type="text" class="input" placeholder="Title" id="modalTitle" required/>
+
+                    <p class="modal-pages">Number of Pages:</p>
+                    <input type="number" class="input" placeholder="100" id="modalPages" required/>
+
+                    <p class="modal-read">Have you read it?</p>
+                        <label class="switch">
+                            <input type="checkbox" id="modalRead"/>
+                            <span  class="slider round"></span>
+                        </label>
+                </form>
+                <button class="submit" id="Submit">Submit</button>
+                <div class="overlay" id="Overlay"></div>
+            </div>
+        </div>
+
+        <div class="add-book" id="addBook">
+            <button class="plusRound" id="Plus">+</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright &copy; dsasaran96</p>
+        <a href="https://github.com/dsasaran96"><i class="fab fa-github"></i></a>
+    </footer>
+</body>
+</html>
